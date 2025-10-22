@@ -8,11 +8,11 @@ The CITY table is described as follows:
 |-------------|-------------------|	          
 |ID	          |     Number        |
 |-------------|-------------------|   
-|NAME	        |    Varchar2(17)   |
+|NAME	      |    Varchar2(17)   |
 |---------------------------------|
-|COUNTRYCODE	|    Varchar2(3)    |
+|COUNTRYCODE  |    Varchar2(3)    |
 |---------------------------------|
-|DISTRICT	    |    Varchar2(20)   |
+|DISTRICT	  |    Varchar2(20)   |
 |---------------------------------|
 |POPULATION	  |    Number         |
 |---------------------------------|
