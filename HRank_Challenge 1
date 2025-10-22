@@ -20,7 +20,10 @@ The CITY table is described as follows:
 
 --sql 
 
--- # APPROACH : 
 
+-- SELECT command is Data Query Language used to extract the data from database and table. 
+-- WHERE is clause used to give the condition or constraint while filtering the specific data from table.
+
+-- # APPROACH 1: 
 SELECT * FROM CITY
 WHERE POPULATION > 100000 AND COUNTRYCODE = 'USA';
