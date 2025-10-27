@@ -1,0 +1,33 @@
+Challenge 2 :
+Query the NAME field for all American cities in the CITY table with populations larger than 120000. The CountryCode for America is USA.
+The CITY table is described as follows:
+
+
+           CITY
+|-------------|-------------------|
+|Field 	      |    Type           |
+|-------------|-------------------|	          
+|ID	          |     Number        |
+|-------------|-------------------|   
+|NAME	        |    Varchar2(17)   |
+|---------------------------------|
+|COUNTRYCODE  |    Varchar2(3)    |
+|---------------------------------|
+|DISTRICT	    |    Varchar2(20)   |
+|---------------------------------|
+|POPULATION	  |    Number         |
+|---------------------------------|
+
+
+--SQL
+
+------ APPROACH 1 ------------
+SELECT NAME FROM CITY 
+WHERE POPULATION > 120000 AND COUNTRYCODE = 'USA';
+
+------APPROACH 2 Using CASE statement --------------------
+SELECT NAME FROM CITY
+WHERE CASE 
+          WHEN POPULATION > 120000 AND COUNTRYCODE = 'USA' THEN 1
+          ELSE 0
+END 1;
