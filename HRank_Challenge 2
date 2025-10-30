@@ -5,17 +5,17 @@ The CITY table is described as follows:
 
            CITY
 |-------------|-------------------|
-|Field 	      |    Type           |
+|Field 	   |    Type           |
 |-------------|-------------------|	          
-|ID	          |     Number        |
+|ID	   |     Number        |
 |-------------|-------------------|   
-|NAME	        |    Varchar2(17)   |
+|NAME	   |    Varchar2(17)   |
 |---------------------------------|
 |COUNTRYCODE  |    Varchar2(3)    |
 |---------------------------------|
-|DISTRICT	    |    Varchar2(20)   |
+|DISTRICT	   |    Varchar2(20)   |
 |---------------------------------|
-|POPULATION	  |    Number         |
+|POPULATION   |    Number         |
 |---------------------------------|
 
 
@@ -31,3 +31,17 @@ WHERE CASE
           WHEN POPULATION > 120000 AND COUNTRYCODE = 'USA' THEN 1
           ELSE 0
 END 1;
+
+
+---------APPROACH 3 Using Subquery -------------------------------
+SELECT NAME 
+FROM (SELECT NAME, COUNTRYCODE, DISTRICT, POPULATION FROM CITY)
+WHERE POPULATION > 120000 AND COUNTRYCODE = 'USA';
+
+
+--------APPROACH 4 Using CTE --------------------------------------
+WITH CTE 
+AS (SELECT NAME, COUNTRYCODE, DISTRICT, POPULATION FROM CITY)
+
+SELECT NAME FROM CITY
+WHERE POPULATION > 120000 AND COUNTRYCODE = 'USA';
