@@ -1,7 +1,20 @@
 Challenge 3: Query all columns (attributes) for every row in the CITY table.
 The CITY table is described as follows:
 
-
+           CITY
+|-------------|-------------------|
+|Field 	  |    Type           |
+|-------------|-------------------|	          
+|ID	        |     Number        |
+|-------------|-------------------|   
+|NAME	        |    Varchar2(17)   |
+|---------------------------------|
+|COUNTRYCODE  |    Varchar2(3)    |
+|---------------------------------|
+|DISTRICT	  |    Varchar2(20)   |
+|---------------------------------|
+|POPULATION   |    Number         |
+|---------------------------------|
 
 
 
